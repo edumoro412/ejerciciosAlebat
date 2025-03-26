@@ -1,35 +1,51 @@
-type Bird = {
+interface Animal {
   name: string;
   canEat: boolean;
   canDrink: boolean;
   canSleep: boolean;
+}
+
+type Bird = Animal & {
   canFly: boolean;
 };
 
-interface Dog extends Bird {
-  race: string | "Husky" | "Labrador" | "Chucho";
+type Dog = Animal & {
+  race: "Husky" | "Labrador" | "Chucho";
   age: number;
-}
+};
 
-interface Cat extends Pick<Bird, "name" | "canSleep"> {
+type Cat = Pick<Animal, "name" | "canSleep"> & {
   color: string;
-}
+};
 
-interface Snake extends Pick<Bird, "canEat" | "canDrink" | "canSleep"> {}
+type Snake = Pick<Animal, "canDrink" | "canEat" | "canSleep"> & {};
+const Pajaro: Bird = {
+  name: "Miguel",
+  canEat: true,
+  canDrink: true,
+  canSleep: true,
+  canFly: true,
+};
+
+const gato: Cat = {
+  name: "Mario",
+  canSleep: true,
+  color: "blanco",
+};
 const perro: Dog = {
   name: "Perro",
   canEat: true,
   canDrink: true,
   age: 4,
-  canFly: true,
   canSleep: true,
-  race: "Golden",
+  race: "Husky",
 };
 
+const serpiente: Snake = {
+  canSleep: true,
+  canDrink: true,
+  canEat: true,
+};
 console.log(perro);
-
-const gato: Cat = {
-  name: "gola",
-  canSleep: true,
-  color: "amarillo",
-};
+console.log(serpiente);
+console.log(gato);
