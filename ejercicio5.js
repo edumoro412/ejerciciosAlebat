@@ -34,5 +34,6 @@ myMap.forEach((valor, clave) => {
   console.log(`Clave=>${clave}  Valor=>${valor}`);
 });
 
+myMap.delete("agarrado");
+
 myMap.clear();
-console.log(myMap);
