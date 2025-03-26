@@ -7,10 +7,15 @@ type Bird = {
 };
 
 interface Dog extends Bird {
-  race: string = "Husky" | "Labrador" | "Chucho";
+  race: string | "Husky" | "Labrador" | "Chucho";
   age: number;
 }
 
+interface Cat extends Pick<Bird, "name" | "canSleep"> {
+  color: string;
+}
+
+interface Snake extends Pick<Bird, "canEat" | "canDrink" | "canSleep"> {}
 const perro: Dog = {
   name: "Perro",
   canEat: true,
@@ -22,3 +27,9 @@ const perro: Dog = {
 };
 
 console.log(perro);
+
+const gato: Cat = {
+  name: "gola",
+  canSleep: true,
+  color: "amarillo",
+};
