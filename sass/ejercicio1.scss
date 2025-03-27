@@ -1,0 +1,31 @@
+$primary-color: red;
+$secondary-color: blue;
+$font-size-h1: 3em;
+$font-size-h2: 2em;
+$font-size-h3: 1.5em;
+$scale: scale(2);
+
+h1 {
+  color: $primary-color;
+  font-size: $font-size-h1;
+}
+
+h2 {
+  color: $secondary-color;
+  font-size: $font-size-h2;
+}
+
+h3 {
+  color: $primary-color;
+  font-size: $font-size-h3;
+}
+
+button {
+  background-color: $primary-color;
+  color: $secondary-color;
+  transition: 0.5 ease;
+}
+
+button:hover {
+  transform: $scale;
+}
