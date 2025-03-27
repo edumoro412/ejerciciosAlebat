@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="ejercicio3.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Formulario</h1>
+    <form action="" target="_blank">
+      <span>
+        <label class="bold"
+          >Name: <input type="text" name="name" required
+        /></label>
+      </span>
+      <span>
+        <label class="bold"
+          >Last: <input type="text" name="last" required
+        /></label>
+      </span>
+      <span>
+        <label class="bold">
+          Age:
+          <input type="number" name="age" max="100" min="1" required />
+        </label>
+      </span>
+      <span>
+        <label class="bold">
+          Email:
+          <input type="email" name="email" required />
+        </label>
+      </span>
+      <span>
+        <p class="bold">Agree to the therms?</p>
+        <label for="yes">
+          Yes
+          <input type="radio" name="terms" value="yes" id="yes" checked />
+        </label>
+        <label for="no">
+          No
+          <input type="radio" name="terms" value="no" id="no" />
+        </label>
+      </span>
+      <span>
+        <label for="terms-checkbox">
+          <span class="bold">Agree the terms?</span>
+
+          <input type="checkbox" name="terms-checkbox" value="no" checked />
+          Yes
+        </label>
+      </span>
+      <input type="submit" value="Submit" class="submit-button" />
+    </form>
+  </body>
+</html>
