@@ -1,0 +1,33 @@
+:root {
+  --color-primary: red;
+  --color-secondary: blue;
+  --font-size-h1: 3em;
+  --font-size-h2: 2.5em;
+  --font-size-h3: 2em;
+  --transition-primary: 0.3s ease;
+}
+
+h1 {
+  color: var(--color-primary);
+  font-size: var(--font-size-h1);
+}
+
+h2 {
+  color: var(--color-primary);
+  font-size: var(--font-size-h2);
+}
+
+h3 {
+  color: var(--color-primary);
+  font-size: var(--font-size-h3);
+}
+
+button {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  transition: var(--transition-primary);
+}
+
+button:hover {
+  transform: scale(2);
+}
