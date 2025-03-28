@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import TheTitle from './components/TheTitle.vue'
+import TheCounter from './components/TheCounter.vue'
 
 const tituloEstatico = 'Titulo Estático'
 </script>
@@ -8,7 +7,7 @@ const tituloEstatico = 'Titulo Estático'
 <template>
   <header>
     <div class="wrapper">
-      <TheTitle>{{ tituloEstatico }}</TheTitle>
+      <TheCounter />
     </div>
   </header>
 </template>

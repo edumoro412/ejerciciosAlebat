@@ -7,7 +7,7 @@
 
 <style>
 h2 {
-  font-size: 2em;
+  font-size: 1em;
   text-decoration: underline;
 }
 </style>
