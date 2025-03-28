@@ -1,15 +1,7 @@
-<script lang="ts" setup>
-import { ref } from 'vue'
-defineProps<{
-  propTitle: {
-    type: string
-    required: true
-  }
-}>()
-</script>
+<script lang="ts" setup></script>
 <template>
   <div>
-    <h2>{{ propTitle }}</h2>
+    <h2><slot /></h2>
   </div>
 </template>
 

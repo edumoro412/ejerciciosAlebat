@@ -8,7 +8,7 @@ const tituloEstatico = 'Titulo Estático'
 <template>
   <header>
     <div class="wrapper">
-      <TheTitle :propTitle="tituloEstatico" />
+      <TheTitle>{{ tituloEstatico }}</TheTitle>
     </div>
   </header>
 </template>
