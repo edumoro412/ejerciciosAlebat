@@ -1,0 +1,14 @@
+.pelicula {
+  color: green;
+  font-size: 3em;
+}
+.pelicula__sinopsis {
+  color: red;
+}
+.pelicula__horario {
+  color: blue;
+}
+.pelicula__horario--sala {
+  font-weight: bold;
+  font-size: 0.5em;
+}/*# sourceMappingURL=ejercicio3.css.map */

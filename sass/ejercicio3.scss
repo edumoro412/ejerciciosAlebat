@@ -1,0 +1,20 @@
+$green: green;
+$red: red;
+$blue: blue;
+
+.pelicula {
+  color: $green;
+  font-size: 3em;
+
+  &__sinopsis {
+    color: $red;
+  }
+
+  &__horario {
+    color: $blue;
+    &--sala {
+      font-weight: bold;
+      font-size: 0.5em;
+    }
+  }
+}
