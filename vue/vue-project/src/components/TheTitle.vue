@@ -1,14 +1,21 @@
+<script lang="ts" setup>
+import { ref } from 'vue'
+defineProps<{
+  propTitle: {
+    type: string
+    required: true
+  }
+}>()
+</script>
 <template>
   <div>
-    <h2>Título estático</h2>
+    <h2>{{ propTitle }}</h2>
   </div>
 </template>
 
-<script lang="ts" setup></script>
-
 <style>
 h2 {
-  font-size: 3em;
+  font-size: 2em;
   text-decoration: underline;
 }
 </style>
