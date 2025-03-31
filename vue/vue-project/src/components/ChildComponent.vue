@@ -1,13 +1,13 @@
 <script setup lang="ts">
-const emit = defineEmits(['parent-greet'])
-
-const sendGreet = () => {
-  emit('parent-greet', 'Hola, componente padre')
-}
+defineProps<{
+  parentFunction: () => void
+  parentMessage: string
+}>()
 </script>
 <template>
   <div>
-    <button class="child-button" @click="sendGreet">Pulsa para saludar al padre</button>
+    <button class="child-button" @click="parentFunction">Mostrar el mensaje del padre</button>
+    <h1 v-if="parentMessage">{{ parentMessage }}</h1>
   </div>
 </template>
 
