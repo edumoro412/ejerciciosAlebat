@@ -1,0 +1,73 @@
+// composables/useCounter.ts
+import { ref } from "vue";
+
+export function useCounter() {
+  const count = ref(0);
+
+  function increment() {
+    count.value++;
+  }
+}
+
+
+----LO QUE ESTA MAL ES QUE FALTA EL RETURN
+
+
+<script setup>
+import { ref } from "vue";
+
+const items = ref(["Apple", "Banana", "Cherry"]);
+</script>
+<template>
+  <ul>
+    <li v-for="(item, index) in items" :key="index">
+      {{ item }}
+    </li>
+  </ul>
+</template>
+
+
+--FALTA PONER EL LANG Y HAY QUE INTENTAR NO USAR EL INDEX COMO KEY, POR LO QUE TENDRIAMOS QUE AÑADIR UN ID A LOS ITEMS, LUEGO TAMBUEB CREO QUE NO HACE FALTA QUE LA LISSTA SEA REACTIVA DE MOMENTO PORQUE NO LA ESTAMOS EDITANDO NI NADA
+
+
+<template>
+  <ul>
+    <TheComponent v-for="item in items" :key="item.id" :dataUser="item" />
+  </ul>
+</template>
+
+
+-----HAY QUE USAR EL V-BIND:ITEM
+
+
+
+<script setup lang="ts">
+import TheTitle from "@/components/TheTitle.vue";
+import TheButton from "@/components/TheButton.vue";
+import { useCounterStore } from "@/stores/counter";
+
+const { count, message, incrementCounter, decrementCounter, doubleCounter } =
+  useCounterStore();
+</script>
+<template>
+  <TheTitle :class="count === 10 ? 'active' : 'inactive'"
+    >Contador: {{ count }} - {{ message }}</TheTitle
+  >
+  <TheTitle>Contador doble: {{ doubleCounter }}</TheTitle>
+
+  <TheButton
+    v-if="count < 10"
+    aria-label="Incrementar contador"
+    @click="incrementCounter"
+    >Increase</TheButton
+  >
+  <TheButton
+    v-if="count > 0"
+    aria-label="Decrementar contador"
+    @click="decrementCounter"
+    >Decrease</TheButton
+  >
+</template>
+
+
+---LO UNICO QUE SE ME OCURRE ES QUE LOS ARIA-LABEL TIENEN QUE ESTAR EN INGLES
