@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import mockProducts, { type Product } from '@/data/mock'
+import type { Product } from '@/data/mock'
 import { defineProps } from 'vue'
 
 defineProps<{
-  products: Product[]
+  product: Product
 }>()
 </script>
 <template>
   <div>
-    <article class="producto" v-for="product in products" :key="product.title">
+    <article class="producto">
       <img :src="product.image" :alt="product.title" />
       <h2>{{ product.title }}</h2>
       <p>{{ product.description }}</p>

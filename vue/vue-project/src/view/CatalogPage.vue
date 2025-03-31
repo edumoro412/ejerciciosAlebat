@@ -7,7 +7,8 @@ import mockProducts from '@/data/mock'
 <template>
   <div>
     <h1>Catalog Page</h1>
-    <ProductCard :products="mockProducts" />
+    <ProductCard v-for="product in mockProducts" :key="product.title" :product="product" />
+
     <TheCounter />
   </div>
 </template>
