@@ -1,15 +1,11 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { provide, ref } from 'vue'
 import ChildComponent from './ChildComponent.vue'
 
-const parentMessage = ref('Hola desde el padre')
-
-function onClic() {
-  parentMessage.value = 'Mensaje actualizado desde el padre'
-}
+provide('message', 'Message from the parent')
 </script>
 <template>
-  <ChildComponent :parentFunction="onClic" :parentMessage="parentMessage" />
+  <ChildComponent />
   <div></div>
 </template>
 

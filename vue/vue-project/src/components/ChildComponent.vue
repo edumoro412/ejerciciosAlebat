@@ -1,13 +1,11 @@
 <script setup lang="ts">
-defineProps<{
-  parentFunction: () => void
-  parentMessage: string
-}>()
+import { inject } from 'vue'
+
+const message = inject('message')
 </script>
 <template>
   <div>
-    <button class="child-button" @click="parentFunction">Mostrar el mensaje del padre</button>
-    <h1 v-if="parentMessage">{{ parentMessage }}</h1>
+    <h1>{{ message }}</h1>
   </div>
 </template>
 
