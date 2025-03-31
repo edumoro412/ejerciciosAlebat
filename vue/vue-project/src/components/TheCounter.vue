@@ -7,7 +7,7 @@ const { counter, increment, decrement } = useCounter()
 <template>
   <div class="contador">
     <TheTitle>Titulo estático</TheTitle>
-    <p>Contador: {{ counter }}</p>
+    <p :class="counter === 10 ? 'contador__green' : 'contador__black'">Contador: {{ counter }}</p>
     <button class="contador__button" v-if="counter < 10" @click="increment">Increment</button>
     <button class="contador__button" v-if="counter > 0" @click="decrement">Decrement</button>
   </div>
@@ -19,5 +19,12 @@ const { counter, increment, decrement } = useCounter()
 }
 .contador__button {
   font-size: 1.2em;
+}
+.contador__green {
+  color: green;
+}
+
+.contador__black {
+  color: black;
 }
 </style>
