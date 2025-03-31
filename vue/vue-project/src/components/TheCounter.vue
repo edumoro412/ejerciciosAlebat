@@ -1,23 +1,15 @@
 <script setup lang="ts">
+import useCounter from '@/composables/counter'
 import TheTitle from './TheTitle.vue'
-import { ref } from 'vue'
 
-const contador = ref(0)
-
-function increment() {
-  contador.value++
-}
-
-function decrement() {
-  contador.value--
-}
+const { counter, increment, decrement } = useCounter()
 </script>
 <template>
   <div class="contador">
     <TheTitle>Titulo estático</TheTitle>
-    <p>Contador: {{ contador }}</p>
-    <button class="contador__button" v-if="contador < 10" @click="increment">Increment</button>
-    <button class="contador__button" v-if="contador > 0" @click="decrement">Decrement</button>
+    <p>Contador: {{ counter }}</p>
+    <button class="contador__button" v-if="counter < 10" @click="increment">Increment</button>
+    <button class="contador__button" v-if="counter > 0" @click="decrement">Decrement</button>
   </div>
 </template>
 
