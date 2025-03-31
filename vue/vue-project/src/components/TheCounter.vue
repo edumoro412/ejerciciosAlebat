@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import useCounter from '@/composables/counter'
-import TheTitle from './TheTitle.vue'
-import { computed, ref, watch } from 'vue'
+import { ref, watch } from 'vue'
 import { useCounterStore } from '@/stores/CounterStore'
+import TheTitle from './TheTitle.vue'
 
 const counterStore = useCounterStore()
+
 let message = ref('')
 
 watch(
@@ -20,6 +20,7 @@ watch(
   },
 )
 </script>
+
 <template>
   <div class="contador">
     <TheTitle>Titulo estático</TheTitle>
@@ -35,19 +36,3 @@ watch(
     </button>
   </div>
 </template>
-
-<style scoped>
-.contador {
-  margin: 1.3em;
-}
-.contador__button {
-  font-size: 1.2em;
-}
-.contador__green {
-  color: green;
-}
-
-.contador__black {
-  color: black;
-}
-</style>
