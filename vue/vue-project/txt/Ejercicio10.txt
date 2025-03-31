@@ -1,0 +1,30 @@
+Ejercicio 11, preguntas sorpresa
+¿Qué es un linter?
+-Es un programa que te ayuda a que el codigo siga un determinado formato. Sobretodo se da uso para que la gente de un equipo programe de la misma manera o similar.
+
+¿Qué es Husky?
+-Es una herramienta que permite ejecutar scripts de manera automática en Git.
+
+¿Qué es la reactividad?
+-Es la actualización del valor de una variable en tiempo real en el programa
+
+¿Desde dónde hay que crear todas las ramas para los desarrollos?
+-Desde main
+
+¿Cuándo se puede utilizar la rama main?
+-Nunca
+
+¿Qué son las custom properties?
+-Son las variables en css
+
+Diferencias entre v-if y v-show
+-El v-if borrar el elemento del DOM si no se cumple, el v-show simplemente le pone un display none
+
+¿Cuáles son los valores de falsy?
+-null, undefined, NaN, 0, -0, ''
+
+¿Qué es Nullish Coalescing Operator?
+-Es el operador ?? sirve para que si una variable tiene alguno de los valores falsy, se le pueda asignar un valor por defecto
+
+¿Para que se utiliza TypeScript?
+-Para poder especificar de que tipo es cada variable, para saber que tipo de dato se espera en según que casos. Y no puedas hacer locuras en el codigo como con javascript
