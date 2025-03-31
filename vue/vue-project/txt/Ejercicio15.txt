@@ -37,7 +37,7 @@ const items = ref(["Apple", "Banana", "Cherry"]);
 </template>
 
 
------HAY QUE USAR EL V-BIND:ITEM
+-----HAY QUE USAR EL V-BIND:ITEM Y FALTA EL LI
 
 
 
