@@ -1,4 +1,8 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+definePageMeta({
+  layout: "catalogo-layout",
+});
+</script>
 <template>
   <div>
     <h1>Esta es la página de catálogo</h1>
